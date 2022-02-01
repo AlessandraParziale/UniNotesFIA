@@ -8,6 +8,7 @@
       <root url="jar://$PROJECT_DIR$/lib/javax.persistence.jar!/" />
       <root url="jar://$PROJECT_DIR$/lib/javax.ejb.jar!/" />
       <root url="jar://$PROJECT_DIR$/lib/javax.servlet.jsp.jar!/" />
+      <root url="file:///Applications/Python 2.7" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

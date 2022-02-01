@@ -35,10 +35,6 @@ public class CorsoServletTest {
     private HttpServletResponse response;
     private HttpSession session;
     private RequestDispatcher requestDispatcher;
-    private MaterialeDidatticoService materialeDidatticoService;
-    private LibrettoService librettoService;
-    private CorsoService corsoService;
-    private UtenteService utenteService;
     private CorsoServlet cs;
 
 
@@ -49,10 +45,22 @@ public class CorsoServletTest {
         session = Mockito.mock(HttpSession.class);
         cs = new CorsoServlet();
         requestDispatcher = Mockito.mock(RequestDispatcher.class);
-        materialeDidatticoService = new MaterialeDidatticoServiceImpl();
-        utenteService = new UtenteServiceImpl();
-        corsoService = new CorsoServiceImpl();
-        librettoService = new LibrettoServiceImpl();
+    }
+
+    @Test
+    public void DoPostCreaifMatchesTest() throws ServletException, IOException {
+        UtenteBean u = new UtenteBean();
+        CorsoBean c = new CorsoBean();
+
+        when(request.getPathInfo()).thenReturn("/crea");
+        when(request.getSession()).thenReturn(session);
+        when(session.getAttribute("utente")).thenReturn(u);
+        when(request.getParameter("Nome")).thenReturn("Nome Corso");
+        when(request.getParameter("Descrizione")).thenReturn("Descrizione corso");
+        when(request.getParameter("NomeProfessore")).thenReturn("Nome Prof");
+
+        cs.doPost(request,response);
+        verify(response,atLeastOnce()).sendRedirect(anyString());
     }
 
     @Test
@@ -247,7 +255,7 @@ public class CorsoServletTest {
         cs.doPost(request,response);
         verify(response,atLeastOnce()).sendRedirect(anyString());
     }
-
+/*
     @Test
     public void DoPostCreaifMatchesTest() throws ServletException, IOException {
         UtenteBean u = new UtenteBean();
@@ -262,7 +270,7 @@ public class CorsoServletTest {
 
         cs.doPost(request,response);
         verify(response,atLeastOnce()).sendRedirect(anyString());
-    }
+    }*/
 
     //test degli if che non matchano
     @Test
