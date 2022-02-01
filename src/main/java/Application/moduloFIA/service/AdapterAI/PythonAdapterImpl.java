@@ -23,9 +23,9 @@ import java.util.List;
     public class PythonAdapterImpl implements PythonAdapter{
 
         @Override
-        public List<String> getAIPrediction(String d1, String d2, String d3, String d4, String d5) {
+        public String getAIPrediction(String d1, String d2, String d3, String d4, String d5) {
 
-            List<String> risposte = new ArrayList<>();
+            String risposta = null;
             try {
                 URL url = new URL("http://127.0.0.1:5000/");
 
@@ -46,12 +46,14 @@ import java.util.List;
                 try(OutputStream os = con.getOutputStream()) {
                     byte[] input = jsonInputString.getBytes("utf-8");
                     os.write(input, 0, input.length);
+                    System.out.println("Inzio Try");
                 }
 
                 int status = con.getResponseCode();
                 Reader sr = null;
                 if (status > 299) {
                     sr = new InputStreamReader(con.getErrorStream());
+                    System.out.println("errore");
 
                 } else {
                     sr = new InputStreamReader(con.getInputStream());
@@ -60,21 +62,22 @@ import java.util.List;
                     StringBuilder stringBuilder = new StringBuilder();
                     while ((inputLine = bf.readLine()) != null) {
                         stringBuilder.append(inputLine);
+                        System.out.println("while");
                     }
                     bf.close();
                     con.disconnect();
-
+                    System.out.println("fuori while");
                     JSONParser parser = new JSONParser();
                     Object obj = parser.parse(stringBuilder.toString());
                     JSONArray jsonData = (JSONArray) obj;
+                    System.out.println("sotto json");
 
-                    for(Object o : jsonData)
-                        risposte.add(o.toString());
+                        risposta=jsonData.toString();
                 }
             } catch (Exception e) {
                 e.printStackTrace();
             }
-            return risposte;
+            return risposta;
         }
     }
 
