@@ -61,6 +61,15 @@ public class UtenteServlet extends HttpServlet {
             }
 
             /**
+             *  Caso per quiz Fia
+             */
+            case "/quiz":{
+
+                request.getRequestDispatcher("/WEB-INF/interface/interfacciaUtente/Quiz.jsp").forward(request,response);
+                break;
+            }
+
+            /**
              *  Caso per tornare alla home
              */
             case "/home":{

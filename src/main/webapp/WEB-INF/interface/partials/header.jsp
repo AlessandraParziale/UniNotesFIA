@@ -28,8 +28,9 @@
                         <a class="nav-link" href="/UniNotes_war_exploded/ListaPreferiti/visualizza">Favorite List</a>
                 </li>
 
-
-
+                <li class="nav-item">
+                    <a class="nav-link" href="/UniNotes_war_exploded/Utente/quiz">Quiz magistrale</a>
+                </li>
 
 
             </ul>
