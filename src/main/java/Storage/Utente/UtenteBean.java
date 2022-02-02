@@ -37,7 +37,7 @@ public class UtenteBean implements Observer{
     private LibrettoBean libretto;
     private ListaPreferitiBean listaPreferiti;
     private ArrayList<MaterialeDidatticoBean> materiale;
-
+    private String magistrale;
 
     /**
      * Costruttore di UtenteBean
@@ -85,6 +85,30 @@ public class UtenteBean implements Observer{
         this.ddn = ddn;
         this.password = password;
         this.tipo = tipo;
+    }
+
+    /**
+     *
+     * Costruttore di UtenteBean
+     * @param nome è il nome dell'utente
+     * @param cognome è il cognome dell'utente
+     * @param cf è il cofice fiscale dell'utente
+     * @param email dell'utente
+     * @param ddn la data di nascita dell'utente
+     * @param password dell'utente
+     * @param tipo dell'utente che lo distingue
+     * l'amministratore e lo studente
+     * @param magistarle è la predizione di una futura magistale
+     */
+    public UtenteBean(String nome, String cognome, String cf, String email, LocalDate ddn, String password, boolean tipo, String magistarle) {
+        this.nome = nome;
+        this.cognome = cognome;
+        this.cf = cf;
+        this.email = email;
+        this.ddn = ddn;
+        this.password = password;
+        this.tipo = tipo;
+        this.magistrale=magistarle;
     }
 
     /**
@@ -348,4 +372,13 @@ public class UtenteBean implements Observer{
         EmailSender emailSender = EmailSender.GetInstance();
         emailSender.SendEmail("Aggiornamento corso", "Gentile " + this.nome + ", è stata aggiunto del nuovo materiale. Saluti da UniNotes.", this.email);
     }
+
+    /**
+     * metodo per restituire una predizione
+     * @return una stringa che si riferisce alla magistarle ottenuta dalla predizione
+     */
+    public String getMagistrale() {
+        return magistrale;
+    }
+
 }

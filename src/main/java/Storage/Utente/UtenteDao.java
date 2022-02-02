@@ -20,7 +20,7 @@ public class UtenteDao {
    public UtenteBean doSave(UtenteBean utente) throws SQLException {
        try(Connection con = ConPool.getConnection()) {
            PreparedStatement ps = con.prepareStatement(
-                   "INSERT INTO Utente(nome, cognome, cf, email, dataDiNascita, password, tipo, idLibretto) VALUES(?,?,?,?,?,?,?,?)",
+                   "INSERT INTO Utente(nome, cognome, cf, email, dataDiNascita, password, tipo, idLibretto) VALUES(?,?,?,?,?,?,?,?,?)",
                    Statement.RETURN_GENERATED_KEYS);
 
            ps.setString(1, utente.getNome());
@@ -45,6 +45,34 @@ public class UtenteDao {
            throw new RuntimeException(e);
        }
    }
+
+    /**
+     * Metodo per salvare la previsione di una magistrale nel DB
+     * @param utente
+     * @return un utente che si è fatto predire una futura magistrale
+     * @throws SQLException
+     */
+
+    public UtenteBean salvaMagistrale(UtenteBean utente) throws SQLException {
+        try(Connection con = ConPool.getConnection()) {
+            PreparedStatement ps = con.prepareStatement(
+                    "INSERT INTO Utente(magistrale) VALUES(?)",
+                    Statement.RETURN_GENERATED_KEYS);
+
+            ps.setString(1, utente.getMagistrale());
+            if (ps.executeUpdate() != 1) {
+                throw new RuntimeException("INSERT error.");
+            }
+            ResultSet rs = ps.getGeneratedKeys();
+            rs.next();
+            int id = rs.getInt(1);
+            utente.setIdUtente(id);
+            return utente;
+
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
 
     /**
      * Ritirna tutti gli utenti presenti nel Database.
