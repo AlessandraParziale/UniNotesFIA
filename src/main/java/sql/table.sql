@@ -68,6 +68,7 @@ create table Utente
     idLibretto    int        null,
     constraint Utente_id_uindex
         unique (id),
+    magistrale    text,
     constraint Utente_Libretto_id_fk
         foreign key (idLibretto) references Libretto (id)
             on update cascade on delete cascade
