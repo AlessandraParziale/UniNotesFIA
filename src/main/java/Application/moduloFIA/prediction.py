@@ -42,6 +42,7 @@ def makePrediction(d1, d2, d3, d4, d5):
     results = []
     results.append(predizione)
     predizione = json.dumps(results, cls=NumpyEncoder)
+
     return predizione[2]
 
 
