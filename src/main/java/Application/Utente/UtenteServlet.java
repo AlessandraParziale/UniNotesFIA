@@ -64,9 +64,14 @@ public class UtenteServlet extends HttpServlet {
              *  Caso per quiz Fia
              */
             case "/quiz":{
+                UtenteBean u = (UtenteBean) request.getSession().getAttribute("utente");
+                if(u.getMagistrale() != null){
+                    request.getRequestDispatcher("/WEB-INF/interface/interfacciaUtente/predizione.jsp").forward(request, response);
+                    break;
+                }
+                    request.getRequestDispatcher("/WEB-INF/interface/interfacciaUtente/Quiz.jsp").forward(request, response);
+                    break;
 
-                request.getRequestDispatcher("/WEB-INF/interface/interfacciaUtente/Quiz.jsp").forward(request,response);
-                break;
             }
 
             /**

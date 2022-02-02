@@ -39,6 +39,7 @@ public class UtenteBean implements Observer{
     private ArrayList<MaterialeDidatticoBean> materiale;
     private String magistrale;
 
+
     /**
      * Costruttore di UtenteBean
      */
@@ -381,4 +382,11 @@ public class UtenteBean implements Observer{
         return magistrale;
     }
 
+    /**
+     *  Metodo che setta la magistrale
+     *  @param magistrale è la magistrale ottenuta dal quiz
+     */
+    public void setMagistrale(String magistrale) {
+        this.magistrale = magistrale;
+    }
 }

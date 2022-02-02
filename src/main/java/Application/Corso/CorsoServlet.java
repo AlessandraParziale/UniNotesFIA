@@ -141,7 +141,7 @@ public class CorsoServlet extends HttpServlet {
                 request.setAttribute("listaPreferiti",listaPreferitiService.visualizzaListaUtente(u.getIdUtente()));
                 request.setAttribute("corsi",corsoService.visualizzaCorsi());
                // request.getRequestDispatcher("/WEB-INF/interface/interfacciaCorso/visualizzaTutti.jsp").forward(request,response);
-                request.getRequestDispatcher("/WEB-INF/Magistrale/MagistraleView.jsp").forward(request,response);
+                request.getRequestDispatcher("/WEB-INF/interface/interfacciaCorso/visualizzaTutti.jsp").forward(request,response);
                 break;
             }
 

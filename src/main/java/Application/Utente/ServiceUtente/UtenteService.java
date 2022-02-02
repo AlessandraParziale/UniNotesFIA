@@ -69,6 +69,11 @@ public interface UtenteService {
      */
     public void rendiAdmin(UtenteBean u);
 
+    /**
+     * Implementa la funzionalità di salvare la magistrale
+     * @param u
+     */
+    public void salvaMagistrale(UtenteBean u) throws SQLException;
 
 
 }

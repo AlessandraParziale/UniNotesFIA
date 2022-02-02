@@ -54,21 +54,21 @@ public class UtenteDao {
      */
 
     public UtenteBean salvaMagistrale(UtenteBean utente) throws SQLException {
-        try(Connection con = ConPool.getConnection()) {
-            PreparedStatement ps = con.prepareStatement(
-                    "INSERT INTO Utente(magistrale) VALUES(?)",
-                    Statement.RETURN_GENERATED_KEYS);
+        try (Connection con = ConPool.getConnection()) {
+            PreparedStatement ps = con.prepareStatement("UPDATE Utente SET nome = ?, cognome = ?, cf = ?, email = ?, dataDiNascita= ?, tipo = ?, magistrale = ? WHERE id = " + utente.getIdUtente());
 
-            ps.setString(1, utente.getMagistrale());
+            ps.setString(1,utente.getNome());
+            ps.setString(2, utente.getCognome());
+            ps.setString(3, utente.getCf());
+            ps.setString(4, utente.getEmail());
+            ps.setObject(5, utente.getDdn());
+            ps.setBoolean(6, utente.isTipo());
+            ps.setString(7, utente.getMagistrale());
+
             if (ps.executeUpdate() != 1) {
-                throw new RuntimeException("INSERT error.");
+                throw new RuntimeException("UPDATE error.");
             }
-            ResultSet rs = ps.getGeneratedKeys();
-            rs.next();
-            int id = rs.getInt(1);
-            utente.setIdUtente(id);
-            return utente;
-
+       return utente;
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }

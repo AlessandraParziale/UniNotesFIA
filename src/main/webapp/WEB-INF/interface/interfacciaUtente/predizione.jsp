@@ -32,33 +32,29 @@
     <link href="dashboard.css" rel="stylesheet">
 </head>
 
+
 <body style="background-color: white">
 
-<header class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
-    <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3" href="/UniNotes_war_exploded/Utente/home"><img src="../img/scrittalogo.png" width="100" height="30"></a>
-    <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-</header>
+    <%@include file="/WEB-INF/interface/partials/header.jsp"%>
+
+
 
 <form action="/UniNotes_war_exploded/MagistraleServlet" method="get">
 
     <div class="container mt-sm-5 my-1">
         <br>
-        <h1 style="color:#ff8400" >La magistrale più adatta a te è: </h1>
+        <h1 style="color:#ff8400" >La magistrale che ti consigliamo è: </h1>
         <br>
 
         <br>
-        <h3 style="color:#ff8400">${predizione}</h3>
+        <h3 style="color:#ff8400">${utente.getMagistrale()}</h3>
         <br>
 
-        <div class="d-flex align-items-center pt-3">
-            <div class="ml-auto mr-sm-5"> <button style="background-color: #ff8400; border-bottom-color: white" class="btn btn-success">Calcola</button> </div>
-        </div>
     </div>
 </form>
 
 <%@include file="../partials/footer.jsp"%>
-
 </body>
+
+
 </html>
