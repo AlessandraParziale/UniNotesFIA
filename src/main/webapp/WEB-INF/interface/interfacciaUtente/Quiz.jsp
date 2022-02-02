@@ -45,36 +45,36 @@
     <br>
     <div class="question ml-sm-5 pl-sm-5 pt-2">
         <div class="py-2 h5"><b style="color:#ff8400" >Q1. Quanti anni hai ?</b></div><br>
-        <div class="ml-md-3 ml-sm-3 pl-md-5 pt-sm-0 pt-3"> <label class="options">22 - 26<input value="0" type="radio" name="d1"> <span class="checkmark"></span> </label><br><br> <label class="options">27 - 31<input value="1" type="radio" name="d1"> <span class="checkmark"></span> </label><br><br> <label class="options">32 - 36<input value="2" type="radio" name="d1"> <span class="checkmark"></span> </label><br><br> <label class="options">36 - 40<input value="3" type="radio" name="d1"> <span class="checkmark"></span> </label><br><br> <label class="options"> > 40<input value="4" type="radio" name="d1"> <span class="checkmark"></span> </label><br><br></div>
+        <div class="ml-md-3 ml-sm-3 pl-md-5 pt-sm-0 pt-3"> <label class="options">18 - 23<input value="0" type="radio" name="d1"> <span class="checkmark"></span> </label><br><br> <label class="options">24 - 30<input value="1" type="radio" name="d1"> <span class="checkmark"></span> </label><br><br> <label class="options">31 - 35<input value="2" type="radio" name="d1"> <span class="checkmark"></span> </label><br><br> <label class="options"> >35<input value="3" type="radio" name="d1"> <span class="checkmark"></span> </label><br><br> </div>
     </div>
 
 </div>
 
     <div class="container mt-sm-5 my-1">
     <div class="question ml-sm-5 pl-sm-5 pt-2">
-        <div class="py-2 h5"><b style="color:#ff8400">Q2. Desideri allontanarti o restare nei pressi dell’università ?</b></div><br>
-        <div class="ml-md-3 ml-sm-3 pl-md-5 pt-sm-0 pt-3"> <label class="options">Allontanarmi<input value="0" type="radio" name="d2"> <span class="checkmark"></span> </label><br><br> <label class="options">Restare nelle vicinanze<input value="1" type="radio" name="d2"> <span class="checkmark"></span> </label><br><br> </div>
+        <div class="py-2 h5"><b style="color:#ff8400">Q2. Quanto è importante per te  la conoscenza della lingua inglese ?</b></div><br>
+        <div class="ml-md-3 ml-sm-3 pl-md-5 pt-sm-0 pt-3"> <label class="options">Per nulla<input value="0" type="radio" name="d2"> <span class="checkmark"></span> </label><br><br> <label class="options">Più no che si<input value="1" type="radio" name="d2"> <span class="checkmark"></span> </label><br><br>  <label class="options">Più si che no<input value="0" type="radio" name="d2"> <span class="checkmark"></span> </label><br><br> <label class="options">Moltissimo<input value="0" type="radio" name="d2"> <span class="checkmark"></span> </label><br><br> </div>
     </div>
     </div>
 
     <div class="container mt-sm-5 my-1">
     <div class="question ml-sm-5 pl-sm-5 pt-2">
-        <div class="py-2 h5"><b style="color:#ff8400">Q3. Perchè ?</b></div><br>
-        <div class="ml-md-3 ml-sm-3 pl-md-5 pt-sm-0 pt-3"> <label class="options">Desidero restare vicino ai miei familiari e amici<input value="0" type="radio" name="d3"> <span class="checkmark"></span> </label><br><br> <label class="options">Desidero allontanarmi per conoscere un nuovo ambiente<input value="1" type="radio" name="d3"> <span class="checkmark"></span> </label><br><br> <label class="options">Ho preso questa decisione con il mio gruppo di amici<input value="2" type="radio" name="d3"> <span class="checkmark"></span> </label><br><br> </div>
+        <div class="py-2 h5"><b style="color:#ff8400">Q3. Qual è il tuo livello della lingua inglese ?</b></div><br>
+        <div class="ml-md-3 ml-sm-3 pl-md-5 pt-sm-0 pt-3"> <label class="options">Principiante (A1-A2)<input value="0" type="radio" name="d3"> <span class="checkmark"></span> </label><br><br> <label class="options">Intermedio (B1-B2)<input value="1" type="radio" name="d3"> <span class="checkmark"></span> </label><br><br> <label class="options">Avanzato (C1-C2)<input value="2" type="radio" name="d3"> <span class="checkmark"></span> </label><br><br> </div>
     </div>
     </div>
 
     <div class="container mt-sm-5 my-1">
     <div class="question ml-sm-5 pl-sm-5 pt-2">
-        <div class="py-2 h5"><b style="color:#ff8400" >Q4. Quanto i progetti organizzati dall’università di Salerno stanno influenzando il tuo percorso ?</b></div><br>
-        <div class="ml-md-3 ml-sm-3 pl-md-5 pt-sm-0 pt-3"> <label class="options">0 (Per nulla)<input value="0" type="radio" name="d4"> <span class="checkmark"></span> </label><br><br> <label class="options">1 (più no che si)<input value="1" type="radio" name="d4"> <span class="checkmark"></span> </label><br><br> <label class="options">2 (Più si che no)<input value="2" type="radio" name="d4"> <span class="checkmark"></span> </label><br><br> <label class="options">3 (Moltissimo)<input value="3" type="radio" name="d4"> <span class="checkmark"></span> </label><br><br> </div>
+        <div class="py-2 h5"><b style="color:#ff8400" >Q4. Quanto è importante per te lo sbocco lavorativo e la relativa retribuzione ?</b></div><br>
+        <div class="ml-md-3 ml-sm-3 pl-md-5 pt-sm-0 pt-3"> <label class="options">Per nulla<input value="0" type="radio" name="d4"> <span class="checkmark"></span> </label><br><br> <label class="options">Più no che si<input value="1" type="radio" name="d4"> <span class="checkmark"></span> </label><br><br>  <label class="options">Più si che no<input value="0" type="radio" name="d4"> <span class="checkmark"></span> </label><br><br> <label class="options">Moltissimo<input value="0" type="radio" name="d4"> <span class="checkmark"></span> </label><br><br> </div>
     </div>
     </div>
 
     <div class="container mt-sm-5 my-1">
     <div class="question ml-sm-5 pl-sm-5 pt-2">
-        <div class="py-2 h5"><b style="color:#ff8400" >Q5. Di che argomento trattava il progetto che sta influenzando il tuo percorso  di più ?</b></div><br>
-        <div class="ml-md-3 ml-sm-3 pl-md-5 pt-sm-0 pt-3"> <label class="options">Cloud Computing<input value="0" type="radio" name="d5"> <span class="checkmark"></span> </label><br><br> <label class="options">Sicurezza Informatica<input value="1" type="radio" name="d5"> <span class="checkmark"></span> </label><br><br> <label class="options">Software Engineering and IT Management<input value="2" type="radio" name="d5"> <span class="checkmark"></span> </label><br><br> <label class="options">IoT<input value="3" type="radio" name="d5"> <span class="checkmark"></span> </label><br><br> <label class="options"> Data Science & Machine Learning <input value="4" type="radio" name="d5"> <span class="checkmark"></span> </label> <br><br> <label class="options"> Nessuno dei progetti svolti sta influenzando il tuo percorso<input value="5" type="radio" name="d5"> <span class="checkmark"></span> </label><br><br> </div>
+        <div class="py-2 h5"><b style="color:#ff8400" >Q5. Quanto sono importanti per te i progetti organizzati dall’università di Salerno ?</b></div><br>
+        <div class="ml-md-3 ml-sm-3 pl-md-5 pt-sm-0 pt-3"> <label class="options">Per nulla<input value="0" type="radio" name="d5"> <span class="checkmark"></span> </label><br><br> <label class="options">Più no che si<input value="1" type="radio" name="d5"> <span class="checkmark"></span> </label><br><br>  <label class="options">Più si che no<input value="0" type="radio" name="d5"> <span class="checkmark"></span> </label><br><br> <label class="options">Moltissimo<input value="0" type="radio" name="d5"> <span class="checkmark"></span> </label><br><br> </div>
     </div>
     </div>
 
