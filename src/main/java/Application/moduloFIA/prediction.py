@@ -28,11 +28,11 @@ class NumpyEncoder(json.JSONEncoder):
         return json.JSONEncoder.default(self, obj)
 
 
-def makePrediction(d1, d2, d3, d4, d5):
+def makePrediction(d1, d2, d3, d4, d5, d6, d7, d8):
     # Chiamo la funzione che legge il modello da file
     model = readModel()
     # effettuo la predizione, salvandola nella lista
-    predizione = model.predict([[d1, d2, d3, d4, d5]])
+    predizione = model.predict([[d1, d2, d3, d4, d5, d6, d7, d8]])
 
 
 
@@ -53,7 +53,7 @@ def makePrediction(d1, d2, d3, d4, d5):
 def home():
 
     json = request.json
-    return jsonify(makePrediction(json['d1'], json['d2'], json['d3'], json['d4'], json['d5']))
+    return jsonify(makePrediction(json['d1'], json['d2'], json['d3'], json['d4'], json['d5'], json['d6'], json['d7'], json['d8']))
 
 
 app.run()

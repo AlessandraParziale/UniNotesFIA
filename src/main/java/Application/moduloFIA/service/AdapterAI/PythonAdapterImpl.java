@@ -24,7 +24,7 @@ import java.util.List;
     public class PythonAdapterImpl implements PythonAdapter{
 
         @Override
-        public String getAIPrediction(String d1, String d2, String d3, String d4, String d5) {
+        public String getAIPrediction(String d1, String d2, String d3, String d4, String d5, String d6, String d7, String d8) {
 
             String risposta = null;
             List<String> risposte = new ArrayList<>();
@@ -41,7 +41,10 @@ import java.util.List;
                         "\", \"d2\": \"" + Integer.parseInt(d2) +
                         "\", \"d3\": \"" + Integer.parseInt(d3) +
                         "\", \"d4\": \"" + Integer.parseInt(d4) +
-                        "\", \"d5\": \"" + Integer.parseInt(d5) + "\"}";
+                        "\", \"d5\": \"" + Integer.parseInt(d4) +
+                        "\", \"d6\": \"" + Integer.parseInt(d4) +
+                        "\", \"d7\": \"" + Integer.parseInt(d4) +
+                        "\", \"d8\": \"" + Integer.parseInt(d5) + "\"}";
 
                 System.out.println(jsonInputString);
 

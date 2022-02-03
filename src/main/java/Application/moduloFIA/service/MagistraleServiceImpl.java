@@ -18,8 +18,8 @@ public class MagistraleServiceImpl implements MagistraleService{
      */
 
     @Override
-    public String predizione(String d1, String d2, String d3, String d4, String d5) {
-        String risposta = pythonAdapter.getAIPrediction(d1, d2, d3, d4, d5);
+    public String predizione(String d1, String d2, String d3, String d4, String d5,  String d6,  String d7,  String d8) {
+        String risposta = pythonAdapter.getAIPrediction(d1, d2, d3, d4, d5, d6, d7, d8);
 
         return risposta;
     }
