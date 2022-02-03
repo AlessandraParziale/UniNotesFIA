@@ -16,8 +16,13 @@ app.config["DEBUG"] = True
 
 
 # Funzione per leggere il modello già allenato da un file
-def readModel():
+def readModelKMeans():
     read_file = open('agente.obj', 'rb')
+    model = pickle.load(read_file)
+    return model
+
+def readModelDecisionTree():
+    read_file = open('agenteDecisionTree.obj', 'rb')
     model = pickle.load(read_file)
     return model
 
@@ -30,24 +35,28 @@ class NumpyEncoder(json.JSONEncoder):
 
 def makePrediction(d1, d2, d3, d4, d5, d6, d7, d8):
     # Chiamo la funzione che legge il modello da file
-    model = readModel()
+    modelKMeans = readModelKMeans()
+    modelDecisionTree = readModelDecisionTree()
     # effettuo la predizione, salvandola nella lista
-    predizione = model.predict([[d1, d2, d3, d4, d5, d6, d7, d8]])
-
+    predizioneKMeans = modelKMeans.predict([[d1, d2, d3, d4, d5, d6, d7, d8]])
+    predizioneDecisionThree = modelDecisionTree.predict([[d1, d2, d3, d4, d5, d6, d7, d8]])
 
 
 
     # Formatto la risposta in una lista, in quanto il metodo model.predict() restituisce
     # un formato diverso da quello che serve.
     results = []
-    results.append(predizione)
+    results.append(predizioneKMeans)
+    results.append(predizioneDecisionThree)
+    print(results)
     predizione = json.dumps(results, cls=NumpyEncoder)
-    return predizione[2]
+    print(predizione[2]+","+predizione[7])
+    return predizione[2]+","+predizione[7]
 
 
 # Questo metodo si occupa di ricevere una chiamata HTTP, in particolare
 # una POST, all'indirizzo localhost:5000/
-# Riceve un JSON contenente le 5 risposte dell'utente, chiama il metodo prediction
+# Riceve un JSON contenente le 7 risposte dell'utente, chiama il metodo prediction
 # e restituisce la lista di domande restituiti sottoforma di JSON
 @app.route('/', methods=['POST'])
 def home():

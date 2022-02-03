@@ -1,19 +1,15 @@
 from __future__ import division, print_function, unicode_literals
-import pandas as pd
-import matplotlib.pyplot as plt
-import pickle
+
 import os
-from sklearn.cluster import KMeans
-import numpy as np
+import pickle
 
-
-from sklearn.model_selection import train_test_split
+import matplotlib.pyplot as plt
+import pandas as pd
 from imblearn.over_sampling import SMOTE
+from sklearn.cluster import KMeans
+from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import MinMaxScaler
 
-from sklearn.feature_selection import SelectKBest
-from sklearn.feature_selection import chi2, f_regression
-from numpy import set_printoptions
 
 #Funzione per salvare e aggiornare il modello in un file
 def saveModel(model):

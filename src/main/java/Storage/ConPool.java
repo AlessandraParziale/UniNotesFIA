@@ -48,7 +48,7 @@ public class ConPool {
 			p.setUrl("jdbc:mysql://localhost:3306/UniNotesDB?serverTimezone=" + TimeZone.getDefault().getID());
 			p.setDriverClassName("com.mysql.cj.jdbc.Driver");
 			p.setUsername("root");
-			p.setPassword("Damiana00*");
+			p.setPassword("0512107364");
 			p.setMaxActive(100);
 			p.setInitialSize(10);
 			p.setMinIdle(10);

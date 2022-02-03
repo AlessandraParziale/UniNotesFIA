@@ -8,9 +8,11 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.io.OutputStream;
 import java.io.Reader;
+import java.lang.reflect.Array;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 
@@ -24,10 +26,10 @@ import java.util.List;
     public class PythonAdapterImpl implements PythonAdapter{
 
         @Override
-        public String getAIPrediction(String d1, String d2, String d3, String d4, String d5, String d6, String d7, String d8) {
+        public ArrayList<String>getAIPrediction(String d1, String d2, String d3, String d4, String d5, String d6, String d7, String d8) {
 
             String risposta = null;
-            List<String> risposte = new ArrayList<>();
+            ArrayList risposte = null;
             try {
                 URL url = new URL("http://127.0.0.1:5000/");
 
@@ -41,10 +43,10 @@ import java.util.List;
                         "\", \"d2\": \"" + Integer.parseInt(d2) +
                         "\", \"d3\": \"" + Integer.parseInt(d3) +
                         "\", \"d4\": \"" + Integer.parseInt(d4) +
-                        "\", \"d5\": \"" + Integer.parseInt(d4) +
-                        "\", \"d6\": \"" + Integer.parseInt(d4) +
-                        "\", \"d7\": \"" + Integer.parseInt(d4) +
-                        "\", \"d8\": \"" + Integer.parseInt(d5) + "\"}";
+                        "\", \"d5\": \"" + Integer.parseInt(d5) +
+                        "\", \"d6\": \"" + Integer.parseInt(d6) +
+                        "\", \"d7\": \"" + Integer.parseInt(d7) +
+                        "\", \"d8\": \"" + Integer.parseInt(d8) + "\"}";
 
                 System.out.println(jsonInputString);
 
@@ -71,12 +73,14 @@ import java.util.List;
                     JSONParser parser = new JSONParser();
                     Object obj = parser.parse(stringBuilder.toString());
                     risposta = (String) obj;
+                    risposte = new ArrayList<String>(Arrays.asList(risposta.split(",")));
+
 
                 }
             } catch (Exception e) {
                 e.printStackTrace();
             }
-            return risposta;
+            return risposte;
         }
     }
 

@@ -1,4 +1,4 @@
-
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 
@@ -39,7 +39,7 @@
 
 
 
-<form action="/UniNotes_war_exploded/MagistraleServlet" method="get">
+<form action="/UniNotes_war_exploded/Magistrale/reset" method="get">
 
     <div class="container mt-sm-5 my-1">
         <br>
@@ -47,8 +47,15 @@
         <br>
 
         <br>
-        <h3 style="color:#ff8400">${utente.getMagistrale()}</h3>
+        <h3 style="color:#ff8400">Predizione KMeans: ${predizione.get(0)}</h3>
         <br>
+
+        <br>
+        <h3 style="color:#ff8400">Predizione Decision Tree: ${predizione.get(1)}</h3>
+        <br>
+
+        <button type="submit" >Reset</button>
+
 
     </div>
 </form>

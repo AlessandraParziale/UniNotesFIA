@@ -37,7 +37,7 @@
 <main>
     <%@include file="/WEB-INF/interface/partials/header.jsp"%>
 
-<form action="/UniNotes_war_exploded/MagistraleServlet" method="get">
+<form action="/UniNotes_war_exploded/Magistrale/magistrale" method="get">
 
 <div class="container mt-sm-5 my-1">
     <br>
