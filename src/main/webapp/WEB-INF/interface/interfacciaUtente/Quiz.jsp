@@ -67,24 +67,69 @@
     <div class="container mt-sm-5 my-1">
     <div class="question ml-sm-5 pl-sm-5 pt-2">
         <div class="py-2 h5"><b style="color:#ff8400" >Q4. Quanto è importante per te lo sbocco lavorativo e la relativa retribuzione ?</b></div><br>
-        <div class="ml-md-3 ml-sm-3 pl-md-5 pt-sm-0 pt-3"> <label class="options">Per nulla<input value="0" type="radio" name="d4"> <span class="checkmark"></span> </label><br><br> <label class="options">Più no che si<input value="1" type="radio" name="d4"> <span class="checkmark"></span> </label><br><br>  <label class="options">Più si che no<input value="0" type="radio" name="d4"> <span class="checkmark"></span> </label><br><br> <label class="options">Moltissimo<input value="0" type="radio" name="d4"> <span class="checkmark"></span> </label><br><br> </div>
+        <div class="ml-md-3 ml-sm-3 pl-md-5 pt-sm-0 pt-3"> <label class="options">Per nulla<input value="0" type="radio" name="d4"> <span class="checkmark"></span> </label><br><br> <label class="options">Più no che si<input value="1" type="radio" name="d4"> <span class="checkmark"></span> </label><br><br>  <label class="options">Più si che no<input value="2" type="radio" name="d4"> <span class="checkmark"></span> </label><br><br> <label class="options">Moltissimo<input value="3" type="radio" name="d4"> <span class="checkmark"></span> </label><br><br> </div>
+    </div>
+    </div>
+
+    <div class="container mt-sm-5 my-1">
+        <div class="question ml-sm-5 pl-sm-5 pt-2">
+            <div class="py-2 h5"><b style="color:#ff8400" >Q5. Quali di questi corsi a scelta ti piace di piu' ?</b></div><br>
+            <div class="ml-md-3 ml-sm-3 pl-md-5 pt-sm-0 pt-3">
+                <label class="options">Calcolo Scientifico<input value="0" type="radio" name="d5"> <span class="checkmark"></span> </label><br><br>
+                <label class="options">Fisica<input value="1" type="radio" name="d5"> <span class="checkmark"></span> </label><br><br>
+                <label class="options">Fondamenti di Intelligenza Artificiale<input value="2" type="radio" name="d5"> <span class="checkmark"></span> </label><br><br>
+                <label class="options">Grafica ed Interattività<input value="3" type="radio" name="d5"> <span class="checkmark"></span></label><br><br>
+                <label class="options">Interazione Uomo-Macchina<input value="4" type="radio" name="d5"> <span class="checkmark"></span></label><br><br>
+                <label class="options">Mobile Programming<input value="5" type="radio" name="d5"> <span class="checkmark"></span></label><br><br>
+                <label class="options">Programmazione Avanzata<input value="6" type="radio" name="d5"> <span class="checkmark"></span></label><br><br>
+                <label class="options">Sicurezza<input value="7" type="radio" name="d5"> <span class="checkmark"></span></label><br><br>
+                <label class="options">Simulazione<input value="8" type="radio" name="d5"> <span class="checkmark"></span></label><br><br>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mt-sm-5 my-1">
+        <div class="question ml-sm-5 pl-sm-5 pt-2">
+            <div class="py-2 h5"><b style="color:#ff8400" >Q6. E' stato l'esame dove hai conseguito uno dei voti più alti ?</b></div><br>
+            <div class="ml-md-3 ml-sm-3 pl-md-5 pt-sm-0 pt-3">
+                <label class="options">No<input value="0" type="radio" name="d6"> <span class="checkmark"></span> </label><br><br>
+                <label class="options">Si<input value="1" type="radio" name="d6"> <span class="checkmark"></span> </label><br><br>
+        </div>
     </div>
     </div>
 
     <div class="container mt-sm-5 my-1">
     <div class="question ml-sm-5 pl-sm-5 pt-2">
-        <div class="py-2 h5"><b style="color:#ff8400" >Q5. Quanto sono importanti per te i progetti organizzati dall’università di Salerno ?</b></div><br>
-        <div class="ml-md-3 ml-sm-3 pl-md-5 pt-sm-0 pt-3"> <label class="options">Per nulla<input value="0" type="radio" name="d5"> <span class="checkmark"></span> </label><br><br> <label class="options">Più no che si<input value="1" type="radio" name="d5"> <span class="checkmark"></span> </label><br><br>  <label class="options">Più si che no<input value="0" type="radio" name="d5"> <span class="checkmark"></span> </label><br><br> <label class="options">Moltissimo<input value="0" type="radio" name="d5"> <span class="checkmark"></span> </label><br><br> </div>
+        <div class="py-2 h5"><b style="color:#ff8400" >Q7. Di tutti i progetti realizzati, il proggetto che ti è piaciuto di più di che argomento trattava ?</b></div><br>
+        <label class="options">Cloud Computing<input value="0" type="radio" name="d7"> <span class="checkmark"></span> </label><br><br>
+        <label class="options">Sicurezza Informatica<input value="1" type="radio" name="d7"> <span class="checkmark"></span> </label><br><br>
+        <label class="options">Software Engineering and IT Management<input value="2" type="radio" name="d7"> <span class="checkmark"></span> </label><br><br>
+        <label class="options">IoT<input value="3" type="radio" name="d7"> <span class="checkmark"></span></label><br><br>
+        <label class="options">Data Science & Machine Learning<input value="4" type="radio" name="d7"> <span class="checkmark"></span></label><br><br>
+        <label class="options">Nessuno dei progetti svolti mi ha incentivato a scegliere un determinato corso magistrale<input value="5" type="radio" name="d7"> <span class="checkmark"></span></label><br><br>
     </div>
     </div>
 
 
+
+
+    <div class="container mt-sm-5 my-1">
+        <div class="question ml-sm-5 pl-sm-5 pt-2">
+            <div class="py-2 h5"><b style="color:#ff8400" >Q8. Su quale argomento pensi che si incentrerà la tua tesi ?</b></div><br>
+            <label class="options">Cloud Computing<input value="0" type="radio" name="d8"> <span class="checkmark"></span> </label><br><br>
+            <label class="options">Sicurezza Informatica<input value="1" type="radio" name="d8"> <span class="checkmark"></span> </label><br><br>
+            <label class="options">Software Engineering and IT Management<input value="2" type="radio" name="d8"> <span class="checkmark"></span> </label><br><br>
+            <label class="options">IoT<input value="3" type="radio" name="d8"> <span class="checkmark"></span></label><br><br>
+            <label class="options">Data Science & Machine Learning<input value="4" type="radio" name="d8"> <span class="checkmark"></span></label><br><br>
+        </div>
+    </div>
 
     <div class="container mt-sm-5 my-1">
     <div class="d-flex align-items-center pt-3">
         <div class="ml-auto mr-sm-5"> <button style="background-color: #ff8400; border-bottom-color: white" class="btn btn-success">Calcola</button> </div>
     </div>
 </div>
+
 </form>
 
 <%@include file="../partials/footer.jsp"%>

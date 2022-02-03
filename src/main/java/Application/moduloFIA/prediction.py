@@ -53,7 +53,6 @@ def makePrediction(d1, d2, d3, d4, d5):
 def home():
 
     json = request.json
-    print("sono qui dentro")
     return jsonify(makePrediction(json['d1'], json['d2'], json['d3'], json['d4'], json['d5']))
 
 

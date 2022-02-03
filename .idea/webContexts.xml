@@ -4,6 +4,7 @@
     <option name="state">
       <map>
         <entry key="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/interface/interfacciaLibretto/visualizzaLibretto.jsp" value="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/interface/interfacciaLibretto" />
+        <entry key="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/interface/interfacciaUtente/Quiz.jsp" value="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/interface/interfacciaUtente" />
         <entry key="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/interface/interfacciaUtente/dashboard.jsp" value="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/interface/interfacciaUtente" />
         <entry key="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/interface/interfacciaUtente/dashboard/paginaPersonale.jsp" value="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/interface/interfacciaUtente/dashboard" />
         <entry key="file://$PROJECT_DIR$/src/main/webapp/index.jsp" value="file://$PROJECT_DIR$/src/main/webapp" />

@@ -5,6 +5,9 @@ import pickle
 import os
 from sklearn.cluster import KMeans
 import numpy as np
+from sklearn.tree import DecisionTreeClassifier
+from sklearn import metrics
+from sklearn.metrics import classification_report, confusion_matrix
 
 
 from sklearn.model_selection import train_test_split
@@ -92,15 +95,27 @@ X.columns[fs.get_support(indices=True)]
 X.columns[fs.get_support(indices=True)].tolist()
 print(X.columns[fs.get_support(indices=True)].tolist())
 
-#Allenamento Kmeans
-kmeans = KMeans(n_clusters=5, random_state=0).fit(X_new_train_res)
-ris = kmeans.predict(X_new_test)
-centroids = kmeans.cluster_centers_
+#Allenamento Three
+tree_model = DecisionTreeClassifier(max_depth=10, random_state=42)
+#The maximum depth of the tree. If None, then nodes are expanded until all leaves are pure or until all leaves contain less than min_samples_split samples.
+
+tree_model.fit(X_new_train_res, y_train_res)
+
+y_pred = tree_model.predict(X_new_test)
+
 count = 0
+
 for i in range(len(y_test)):
-    if ris[i] == y_test.values[i]:
+    if y_pred[i] == y_test.values[i]:
         count += 1
 
 print(count)
 
-saveModel(kmeans)
+labels = np.unique(y_test)
+print(confusion_matrix(y_test, y_pred, labels=labels))
+print(classification_report(y_test, y_pred))
+
+#Overall, how often is the classifier correct?
+print("Accuracy:",metrics.accuracy_score(y_test, y_pred))
+
+saveModel(tree_model)
