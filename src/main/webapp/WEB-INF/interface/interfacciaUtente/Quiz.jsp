@@ -36,8 +36,8 @@
 
 <main>
     <%@include file="/WEB-INF/interface/partials/header.jsp"%>
-
-<form action="/UniNotes_war_exploded/Magistrale/magistrale" method="get">
+    <c:if test="${utente.getMagistrale()==null}">
+        <form action="/UniNotes_war_exploded/Magistrale/magistrale" method="get">
 
 <div class="container mt-sm-5 my-1">
     <br>
@@ -131,7 +131,26 @@
 </div>
 
 </form>
+     </c:if>
+        <c:if test="${utente.getMagistrale()!=null}">
+        <form action="/UniNotes_war_exploded/Magistrale/reset" method="get">
 
+            <div class="container mt-sm-5 my-1">
+                <br>
+                <h1 style="color:#ff8400" >La magistrale che ti consigliamo è: </h1>
+                <br>
+
+                <br>
+                <h3 style="color:#ff8400">Predizione KMeans: ${utente.getMagistrale()}</h3>
+                <br>
+
+
+                <button type="submit" >Reset</button>
+
+
+            </div>
+        </form>
+        </c:if>
 <%@include file="../partials/footer.jsp"%>
 
 </body>

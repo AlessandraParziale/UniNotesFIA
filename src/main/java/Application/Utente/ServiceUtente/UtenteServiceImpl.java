@@ -115,18 +115,14 @@ public class UtenteServiceImpl implements UtenteService {
 
     /**
      *
-     * @param u
+     * @param
      * @return
      */
-    public String magistrale(UtenteBean u) {
+    public String magistrale(int id) {
         System.out.println("utente 4.1");
         UtenteDao ud = new UtenteDao();
         System.out.println("utente 5");
-        UtenteBean utenteBean= ud.doRetriveMagistrale(u);
-        System.out.println("utente 6");
-        if(utenteBean.getMagistrale()!=null)
-            return utenteBean.getMagistrale();
-        return null;
+        return ud.doRetriveMagistrale(id);
     }
 
     /**

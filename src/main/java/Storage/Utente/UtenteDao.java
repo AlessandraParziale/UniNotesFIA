@@ -74,21 +74,17 @@ public class UtenteDao {
         }
     }
 
-    public UtenteBean doRetriveMagistrale (UtenteBean utenteBean){
+    public String doRetriveMagistrale (int id){
+        String m = null;
         try (Connection con = ConPool.getConnection()) {
             PreparedStatement ps =
-                    con.prepareStatement("SELECT * FROM Utente u WHERE u.id="+ utenteBean.getIdUtente());
-            System.out.println("utente 7");
+                    con.prepareStatement("SELECT * FROM Utente u WHERE u.id="+id);
             ResultSet rs = ps.executeQuery();
-            System.out.println("utente 8.1");
-            UtenteBean u = new UtenteBean();
-            System.out.println("utente 9");
 
             if (rs.next()) {
-                u.setMagistrale(rs.getString("u.magistrale"));
+                m = rs.getString("u.magistrale");
             }
-            System.out.println("utente "+ u.getMagistrale());
-            return u;
+            return m;
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }

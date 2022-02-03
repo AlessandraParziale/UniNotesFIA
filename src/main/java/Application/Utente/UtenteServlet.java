@@ -65,12 +65,13 @@ public class UtenteServlet extends HttpServlet {
              */
             case "/quiz":{
                 UtenteBean u = (UtenteBean) request.getSession().getAttribute("utente");
-                if(u.getMagistrale() != null){
-                    request.getRequestDispatcher("/WEB-INF/interface/interfacciaUtente/predizione.jsp").forward(request, response);
+                if(u == null){
+                    response.sendRedirect("/UniNotes_war_exploded/");
                     break;
                 }
-                    request.getRequestDispatcher("/WEB-INF/interface/interfacciaUtente/Quiz.jsp").forward(request, response);
-                    break;
+                request.getRequestDispatcher("/WEB-INF/interface/interfacciaUtente/Quiz.jsp").forward(request, response);
+                break;
+
 
             }
 
@@ -329,12 +330,10 @@ public class UtenteServlet extends HttpServlet {
                         System.out.println("utente 3");
                         HttpSession ssn = request.getSession(true);
                         System.out.println("utente 4");
-                        String magistrale = utenteService.magistrale(utente);
-                        System.out.println("utente 5" +magistrale);
+                        utente.setMagistrale(utenteService.magistrale(utente.getIdUtente()));
                         utente.setLibretto(librettoService.visualizzaLibretto(librettoConIdUtente.getIdLibretto()));
                         ssn.setAttribute("libretto",librettoService.visualizzaLibretto(librettoConIdUtente.getIdLibretto()));
                         ssn.setAttribute("utente", utente);
-                        ssn.setAttribute("magistrale",magistrale);
                         ssn.setMaxInactiveInterval(86400);
                         response.sendRedirect("/UniNotes_war_exploded/Utente/home");
                         break;
