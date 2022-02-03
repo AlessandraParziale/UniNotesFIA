@@ -322,13 +322,19 @@ public class UtenteServlet extends HttpServlet {
                         e.printStackTrace();
                     }
                     utente = utenteService.login(email, utente.getPassword());
-                    if(utente != null){
+                    if(utente != null){    System.out.println("utente 1");
                         request.getSession(false).invalidate();
+                        System.out.println("utente 2");
                         LibrettoBean librettoConIdUtente = librettoService.visualizzaLibrettoDiUtente(utente.getIdUtente());
+                        System.out.println("utente 3");
                         HttpSession ssn = request.getSession(true);
+                        System.out.println("utente 4");
+                        String magistrale = utenteService.magistrale(utente);
+                        System.out.println("utente 5" +magistrale);
                         utente.setLibretto(librettoService.visualizzaLibretto(librettoConIdUtente.getIdLibretto()));
                         ssn.setAttribute("libretto",librettoService.visualizzaLibretto(librettoConIdUtente.getIdLibretto()));
                         ssn.setAttribute("utente", utente);
+                        ssn.setAttribute("magistrale",magistrale);
                         ssn.setMaxInactiveInterval(86400);
                         response.sendRedirect("/UniNotes_war_exploded/Utente/home");
                         break;

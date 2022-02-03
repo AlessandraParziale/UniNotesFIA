@@ -74,6 +74,7 @@ public class UtenteServiceImpl implements UtenteService {
         return null;
     }
 
+
     /*
     public void interireInListaPreferiti(int u, int c) {
         ListaPreferitiDao ld = new ListaPreferitiDao();
@@ -110,6 +111,22 @@ public class UtenteServiceImpl implements UtenteService {
         UtenteDao ud = new UtenteDao();
         utenti = ud.doRetriveAll();
         return utenti;
+    }
+
+    /**
+     *
+     * @param u
+     * @return
+     */
+    public String magistrale(UtenteBean u) {
+        System.out.println("utente 4.1");
+        UtenteDao ud = new UtenteDao();
+        System.out.println("utente 5");
+        UtenteBean utenteBean= ud.doRetriveMagistrale(u);
+        System.out.println("utente 6");
+        if(utenteBean.getMagistrale()!=null)
+            return utenteBean.getMagistrale();
+        return null;
     }
 
     /**

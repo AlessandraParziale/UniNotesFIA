@@ -75,5 +75,7 @@ public interface UtenteService {
      */
     public void salvaMagistrale(UtenteBean u) throws SQLException;
 
+    public String magistrale(UtenteBean u);
+
 
 }
