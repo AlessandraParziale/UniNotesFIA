@@ -35,7 +35,7 @@ datapath = os.path.join("magistrale", "")
 dataset = pd.read_csv(datapath + "DataSetArtificiale.csv")
 
 #X sono le variabili indipendenti
-X= dataset.iloc[ : , 2:8]
+X= dataset.iloc[ : , 2:10]
 
 #Y variabile dipendete
 y= dataset.iloc[ : , 1]
@@ -81,27 +81,26 @@ x_test = scl.fit_transform(X_test)
 print(X_train_res)
 
 #feature selection supervised
+#fs = SelectKBest(score_func=chi2,k=5)
+#fs.fit_transform(X_train_res, y_train_res)
 
-fs = SelectKBest(score_func=chi2,k=5)
-fs.fit_transform(X_train_res, y_train_res)
-
-X_new_train_res = fs.transform(X_train_res)
-X_new_test = fs.transform(X_test)
-print(X_new_train_res.shape)
+#X_new_train_res = fs.transform(X_train_res)
+#X_new_test = fs.transform(X_test)
+#print(X_new_train_res.shape)
 
 
-X.columns[fs.get_support(indices=True)]
+#X.columns[fs.get_support(indices=True)]
 
-X.columns[fs.get_support(indices=True)].tolist()
-print(X.columns[fs.get_support(indices=True)].tolist())
+#X.columns[fs.get_support(indices=True)].tolist()
+#print(X.columns[fs.get_support(indices=True)].tolist())
 
 #Allenamento Three
 tree_model = DecisionTreeClassifier(max_depth=10, random_state=42)
 #The maximum depth of the tree. If None, then nodes are expanded until all leaves are pure or until all leaves contain less than min_samples_split samples.
 
-tree_model.fit(X_new_train_res, y_train_res)
+tree_model.fit(X_train_res, y_train_res)
 
-y_pred = tree_model.predict(X_new_test)
+y_pred = tree_model.predict(X_test)
 
 count = 0
 

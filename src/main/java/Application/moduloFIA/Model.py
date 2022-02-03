@@ -32,7 +32,7 @@ datapath = os.path.join("magistrale", "")
 dataset = pd.read_csv(datapath + "DataSetArtificiale.csv")
 
 #X sono le variabili indipendenti
-X= dataset.iloc[ : , 2:8]
+X= dataset.iloc[ : , 2:10]
 
 #Y variabile dipendete
 y= dataset.iloc[ : , 1]
@@ -79,22 +79,22 @@ print(X_train_res)
 
 #feature selection supervised
 
-fs = SelectKBest(score_func=chi2,k=5)
-fs.fit_transform(X_train_res, y_train_res)
+#fs = SelectKBest(score_func=chi2,k=5)
+#fs.fit_transform(X_train_res, y_train_res)
 
-X_new_train_res = fs.transform(X_train_res)
-X_new_test = fs.transform(X_test)
-print(X_new_train_res.shape)
+#X_new_train_res = fs.transform(X_train_res)
+#X_new_test = fs.transform(X_test)
+#print(X_new_train_res.shape)
 
 
-X.columns[fs.get_support(indices=True)]
+#X.columns[fs.get_support(indices=True)]
 
-X.columns[fs.get_support(indices=True)].tolist()
-print(X.columns[fs.get_support(indices=True)].tolist())
+#X.columns[fs.get_support(indices=True)].tolist()
+#print(X.columns[fs.get_support(indices=True)].tolist())
 
 #Allenamento Kmeans
-kmeans = KMeans(n_clusters=5, random_state=0).fit(X_new_train_res)
-ris = kmeans.predict(X_new_test)
+kmeans = KMeans(n_clusters=5, random_state=0).fit(X_train_res)
+ris = kmeans.predict(X_test)
 centroids = kmeans.cluster_centers_
 count = 0
 for i in range(len(y_test)):

@@ -29,9 +29,9 @@ public class MagistraleServlet extends HttpServlet {
                         String d3 = request.getParameter("d3");
                         String d4 = request.getParameter("d4");
                         String d5 = request.getParameter("d5");
-                        String d6 = request.getParameter("d5");
-                        String d7 = request.getParameter("d5");
-                        String d8 = request.getParameter("d5");
+                        String d6 = request.getParameter("d6");
+                        String d7 = request.getParameter("d7");
+                        String d8 = request.getParameter("d8");
 
                                 String s = ms.predizione(d1, d2, d3, d4, d5, d6, d7, d8);
                                 String p = "";
