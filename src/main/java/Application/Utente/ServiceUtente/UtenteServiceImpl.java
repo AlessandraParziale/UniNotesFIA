@@ -119,9 +119,7 @@ public class UtenteServiceImpl implements UtenteService {
      * @return
      */
     public String magistrale(int id) {
-        System.out.println("utente 4.1");
         UtenteDao ud = new UtenteDao();
-        System.out.println("utente 5");
         return ud.doRetriveMagistrale(id);
     }
 

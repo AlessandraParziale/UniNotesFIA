@@ -20,7 +20,7 @@ from numpy import set_printoptions
 
 #Funzione per salvare e aggiornare il modello in un file
 def saveModel(model):
-    save_file = open("agente.obj", 'wb')
+    save_file = open("agenteKMeans.obj", 'wb')
     pickle.dump(model, save_file)
 
 def verBilanciamento(dataset):

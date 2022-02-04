@@ -17,7 +17,7 @@ app.config["DEBUG"] = True
 
 # Funzione per leggere il modello già allenato da un file
 def readModelKMeans():
-    read_file = open('agente.obj', 'rb')
+    read_file = open('agenteKMeans.obj', 'rb')
     model = pickle.load(read_file)
     return model
 

@@ -323,13 +323,10 @@ public class UtenteServlet extends HttpServlet {
                         e.printStackTrace();
                     }
                     utente = utenteService.login(email, utente.getPassword());
-                    if(utente != null){    System.out.println("utente 1");
+                    if(utente != null){
                         request.getSession(false).invalidate();
-                        System.out.println("utente 2");
                         LibrettoBean librettoConIdUtente = librettoService.visualizzaLibrettoDiUtente(utente.getIdUtente());
-                        System.out.println("utente 3");
                         HttpSession ssn = request.getSession(true);
-                        System.out.println("utente 4");
                         utente.setMagistrale(utenteService.magistrale(utente.getIdUtente()));
                         utente.setLibretto(librettoService.visualizzaLibretto(librettoConIdUtente.getIdLibretto()));
                         ssn.setAttribute("libretto",librettoService.visualizzaLibretto(librettoConIdUtente.getIdLibretto()));
