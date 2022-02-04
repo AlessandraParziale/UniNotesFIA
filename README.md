@@ -16,7 +16,7 @@ Lasciamo che l'utente risponda a 8 domande con un quiz e attraverso le risposte 
 <a href="https://github.com/AlessandraParziale/UniNotesFIA/blob/master/DocumentazioneG14.zip"><b>link</b></a>
 
 La documentazione del modulo di intelligenza artificiale è disponibile all’interno del file “DocumentazioneModuloFia.zip”
-<a href="https://github.com/StefanoLambiase/biblionet/tree/master/projectDocs/Prodotto/Documenti"><b>link</b></a>
+<a href=""><b>link</b></a>
 
 ## Authors
 
