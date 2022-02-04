@@ -18,7 +18,7 @@ Lasciamo che l'utente risponda a 8 domande con un quiz e attraverso le risposte 
 La documentazione del modulo di intelligenza artificiale è disponibile all’interno del file “DocumentazioneModuloFia.zip”
 <a href=""><b>link</b></a>
 
-## Authors
+## Autori
 
 * **Otino Pio Santosuosso**      - *Team member*   - [Pio57](https://github.com/Pio57)
 * **Damiana Buono**       - *Team member*         - [DamianaBuono](https://github.com/DamianaBuono)
