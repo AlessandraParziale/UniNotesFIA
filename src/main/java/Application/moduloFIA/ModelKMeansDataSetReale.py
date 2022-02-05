@@ -1,19 +1,12 @@
 from __future__ import division, print_function, unicode_literals
 import pandas as pd
-import matplotlib.pyplot as plt
 import pickle
 import os
 from sklearn.cluster import KMeans
-import numpy as np
 
 
 from sklearn.model_selection import train_test_split
 from imblearn.over_sampling import SMOTE
-from sklearn.preprocessing import MinMaxScaler
-
-from sklearn.feature_selection import SelectKBest
-from sklearn.feature_selection import chi2, f_regression
-from numpy import set_printoptions
 
 #Funzione per salvare e aggiornare il modello in un file
 def saveModel(model):
@@ -22,7 +15,7 @@ def saveModel(model):
 
 
 
-#Leggo i dati dal dataset artificiale
+#Leggo i dati dal dataset reale
 datapath = os.path.join("magistrale", "")
 dataset = pd.read_csv(datapath + "DataSetReale.csv")
 

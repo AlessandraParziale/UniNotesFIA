@@ -14,7 +14,7 @@ def saveModel(model):
 
 
 
-#Leggo i dati dal dataset artificiale
+#Leggo i dati dal dataset reale
 datapath = os.path.join("magistrale", "")
 dataset = pd.read_csv(datapath + "DataSetReale.csv")
 
@@ -58,7 +58,7 @@ print("Dopo l'OverSampling, il numero di label '4': {}".format(sum(y_train_res =
 
 
 #Allenamento Three
-tree_model = DecisionTreeClassifier(max_depth=10, random_state=42)
+tree_model = DecisionTreeClassifier(max_depth=12, random_state=42)
 
 tree_model.fit(X_train_res, y_train_res)
 

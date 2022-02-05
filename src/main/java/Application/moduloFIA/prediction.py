@@ -35,17 +35,16 @@ class NumpyEncoder(json.JSONEncoder):
 
 
 def makePrediction(d1, d2, d3, d4, d5, d6, d7, d8):
-    # Chiamo la funzione che legge il modello da file
+    # Chiamo le funzioni che leggono i modelli dai due file
     modelKMeans = readModelKMeans()
     modelDecisionTree = readModelDecisionTree()
-    # effettuo la predizione, salvandola nella lista
+    # effettuo la predizione
     predizioneKMeans = modelKMeans.predict([[d1, d2, d3, d4, d5, d6, d7, d8]])
     predizioneDecisionThree = modelDecisionTree.predict([[d1, d2, d3, d4, d5, d6, d7, d8]])
 
 
 
-    # Formatto la risposta in una lista, in quanto il metodo model.predict() restituisce
-    # un formato diverso da quello che serve.
+   #json.dumps(results, cls=NumpyEncoder) serve per serializzare le predizioni
     results = []
     results.append(predizioneKMeans)
     results.append(predizioneDecisionThree)
@@ -55,10 +54,8 @@ def makePrediction(d1, d2, d3, d4, d5, d6, d7, d8):
     return predizione[2]+","+predizione[7]
 
 
-# Questo metodo si occupa di ricevere una chiamata HTTP, in particolare
-# una POST, all'indirizzo localhost:5000/
-# Riceve un JSON contenente le 7 risposte dell'utente, chiama il metodo prediction
-# e restituisce la lista di domande restituiti sottoforma di JSON
+# Questo metodo si occupa di restare in ascolto su localhost:5000/ per ricevere delle richeste JSON
+# e restituisce la predizione
 @app.route('/', methods=['POST'])
 def home():
 
