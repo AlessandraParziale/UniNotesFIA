@@ -1,22 +1,11 @@
 from __future__ import division, print_function, unicode_literals
 import pandas as pd
-import matplotlib.pyplot as plt
 import pickle
 import os
-from sklearn.cluster import KMeans
-import numpy as np
 from sklearn.tree import DecisionTreeClassifier
-from sklearn import metrics
-from sklearn.metrics import classification_report, confusion_matrix
-
 
 from sklearn.model_selection import train_test_split
 from imblearn.over_sampling import SMOTE
-from sklearn.preprocessing import MinMaxScaler
-
-from sklearn.feature_selection import SelectKBest
-from sklearn.feature_selection import chi2, f_regression
-from numpy import set_printoptions
 
 #Funzione per salvare e aggiornare il modello in un file
 def saveModel(model):

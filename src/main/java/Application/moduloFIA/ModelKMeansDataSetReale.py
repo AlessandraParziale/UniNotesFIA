@@ -47,7 +47,6 @@ print("y_test dataset: ", y_test.shape)
 
 
 #La funzione smote porta le istanze minoritaria al numero delle istanze maggioritarie
-
 print("Prima dell'OverSampling, il numero delle label '0': {}".format(sum(y_train == 0)))
 print("Prima dell'OverSampling, il numero delle label '1': {}".format(sum(y_train == 1)))
 print("Prima dell'OverSampling, il numero delle label '2': {}".format(sum(y_train == 2)))

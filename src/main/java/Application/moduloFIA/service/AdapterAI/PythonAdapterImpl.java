@@ -1,19 +1,15 @@
 package Application.moduloFIA.service.AdapterAI;
 
-import com.mysql.cj.xdevapi.JsonString;
-import org.json.simple.JSONArray;
 import org.json.simple.parser.JSONParser;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.io.OutputStream;
 import java.io.Reader;
-import java.lang.reflect.Array;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
 
 
 
@@ -39,16 +35,7 @@ import java.util.List;
                 con.setRequestProperty("Accept", "application/json");
                 con.setDoOutput(true);
 
-                String jsonInputString = "{\"d1\": \"" + Integer.parseInt(d1) +
-                        "\", \"d2\": \"" + Integer.parseInt(d2) +
-                        "\", \"d3\": \"" + Integer.parseInt(d3) +
-                        "\", \"d4\": \"" + Integer.parseInt(d4) +
-                        "\", \"d5\": \"" + Integer.parseInt(d5) +
-                        "\", \"d6\": \"" + Integer.parseInt(d6) +
-                        "\", \"d7\": \"" + Integer.parseInt(d7) +
-                        "\", \"d8\": \"" + Integer.parseInt(d8) + "\"}";
-
-                System.out.println(jsonInputString);
+                String jsonInputString = "{\"d1\": \"" + Integer.parseInt(d1) + "\", \"d2\": \"" + Integer.parseInt(d2) + "\", \"d3\": \"" + Integer.parseInt(d3) + "\", \"d4\": \"" + Integer.parseInt(d4) + "\", \"d5\": \"" + Integer.parseInt(d5) + "\", \"d6\": \"" + Integer.parseInt(d6) + "\", \"d7\": \"" + Integer.parseInt(d7) + "\", \"d8\": \"" + Integer.parseInt(d8) + "\"}";
 
                 try(OutputStream os = con.getOutputStream()) {
                     byte[] input = jsonInputString.getBytes("utf-8");
