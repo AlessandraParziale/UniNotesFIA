@@ -1,26 +1,19 @@
 from __future__ import division, print_function, unicode_literals
-import pandas as pd
-import matplotlib.pyplot as plt
-import pickle
+
 import os
-from sklearn.cluster import KMeans
-import numpy as np
-from sklearn.tree import DecisionTreeClassifier
-from sklearn import metrics
-from sklearn.metrics import classification_report, confusion_matrix
+import pickle
 
-
-from sklearn.model_selection import train_test_split
+import matplotlib.pyplot as plt
+import pandas as pd
 from imblearn.over_sampling import SMOTE
+from sklearn.cluster import KMeans
+from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import MinMaxScaler
 
-from sklearn.feature_selection import SelectKBest
-from sklearn.feature_selection import chi2, f_regression
-from numpy import set_printoptions
 
 #Funzione per salvare e aggiornare il modello in un file
 def saveModel(model):
-    save_file = open("agenteDecisionTree.obj", 'wb')
+    save_file = open("agenteKMeans.obj", 'wb')
     pickle.dump(model, save_file)
 
 
@@ -40,10 +33,12 @@ y= dataset.iloc[ : , 1]
 
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
+
 print("X_train dataset: ", X_train.shape)
 print("y_train dataset: ", y_train.shape)
 print("X_test dataset: ", X_test.shape)
 print("y_test dataset: ", y_test.shape)
+
 
 
 
@@ -65,12 +60,10 @@ print("Dopo l'OverSampling, il numero di label '3': {}".format(sum(y_train_res =
 print("Dopo l'OverSampling, il numero di label '4': {}".format(sum(y_train_res == 4)))
 
 
-#Allenamento Three
-tree_model = DecisionTreeClassifier(max_depth=12, random_state=42)
-
-tree_model.fit(X_train, y_train)
-
-y_pred = tree_model.predict(X_test)
+#Allenamento Kmeans
+kmeans = KMeans(n_clusters=5, random_state=0).fit(X_train)
+ris = kmeans.predict(X_test)
+centroids = kmeans.cluster_centers_
 
 
-saveModel(tree_model)
+saveModel(kmeans)

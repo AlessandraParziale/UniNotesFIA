@@ -54,8 +54,11 @@
         <h3 style="color:#ff8400">Predizione Decision Tree: ${predizione.get(1)}</h3>
         <br>
 
-        <button type="submit" >Reset</button>
-
+        <div class="container mt-sm-5 my-1">
+            <div class="d-flex align-items-center pt-3">
+                <div class="ml-auto mr-sm-5"> <button style="background-color: #ff8400; border-bottom-color: white" class="btn btn-success">Reset</button> </div>
+            </div>
+        </div>
 
     </div>
 </form>

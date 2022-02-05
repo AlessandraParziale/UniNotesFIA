@@ -15,12 +15,13 @@ app = flask.Flask(__name__)
 app.config["DEBUG"] = True
 
 
-# Funzione per leggere il modello già allenato da un file
+# Funzione per leggere il modello KMeans già allenato da un file
 def readModelKMeans():
     read_file = open('agenteKMeans.obj', 'rb')
     model = pickle.load(read_file)
     return model
 
+# Funzione per leggere il modello DecisionTree già allenato da un file
 def readModelDecisionTree():
     read_file = open('agenteDecisionTree.obj', 'rb')
     model = pickle.load(read_file)
