@@ -15,8 +15,8 @@ Lasciamo che l'utente risponda a 8 domande con un quiz e attraverso le risposte 
 È possibile trovare la documentazione di tutto il progetto all’interno del file “DocumentazioneG14.zip” 
 <a href="https://github.com/AlessandraParziale/UniNotesFIA/blob/master/DocumentazioneG14.zip"><b>link</b></a>
 
-La documentazione del modulo di intelligenza artificiale è disponibile all’interno del file “DocumentazioneModuloFia.zip”
-<a href=""><b>link</b></a>
+La documentazione del modulo di intelligenza artificiale è disponibile all’interno del file “Documentazione.pdf”
+<a href="https://github.com/AlessandraParziale/UniNotesFIA/blob/master/Documentazione.pdf"><b>link</b></a>
 
 ## Autori
 
