@@ -23,11 +23,6 @@ def saveModel(model):
     save_file = open("agenteKMeans.obj", 'wb')
     pickle.dump(model, save_file)
 
-def verBilanciamento(dataset):
-    pd.value_counts(dataset['magistrale']).plot.bar()
-    plt.xlabel('magistrale')
-    plt.ylabel('Frequency')
-    dataset['magistrale'].value_counts()
 
 
 #Leggo i dati dal dataset artificiale
@@ -40,8 +35,6 @@ X= dataset.iloc[ : , 2:10]
 #Y variabile dipendete
 y= dataset.iloc[ : , 1]
 
-#Richiamiamo verBilanciamento
-verBilanciamento(dataset)
 
 
 #dividere il dataset 20% per il test e 80% per il train
